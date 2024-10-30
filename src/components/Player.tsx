@@ -11,14 +11,14 @@ function Player() {
 				<img src={banner}></img>
 			</div>
 			<div className="main-player">
-				<span className="main-player-album-name text-stroke">{name}</span>
-				<span className="main-player-singer">{singer}</span>
+				<span className="main-player-album-name text-stroke text-xl">{name}</span>
+				<span className="main-player-singer text-lg">{singer}</span>
 				<div className="main-player-controls">
-					<FontAwesomeIcon className="icon-btn" icon={faBackwardStep} />
-					<FontAwesomeIcon className="icon-btn" icon={true ? faPlay : faPause} />
-					<FontAwesomeIcon className="icon-btn" icon={faForwardStep} />
+					<FontAwesomeIcon className="icon-btn text-md" icon={faBackwardStep} />
+					<FontAwesomeIcon className="icon-btn text-md" icon={true ? faPlay : faPause} />
+					<FontAwesomeIcon className="icon-btn text-md" icon={faForwardStep} />
 				</div>
-				<div className="marquee">
+				<div className="marquee text-md">
 					<span>Datmaniac - Tiếng ca tiên cá ft. Mèo, Chú 13</span>
 				</div>
 			</div>

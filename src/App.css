@@ -2,16 +2,22 @@
 	position: relative;
 	color: white;
 }
-
-.app-logo {
+.app-header {
 	position: fixed;
-	top: 32px;
-	left: 48px;
+    width: -webkit-fill-available;
+    display: flex;
+    justify-content: space-between;
+	align-items: center;
+    padding: 24px 48px;
+	z-index: 1;
+}
+.app-logo {
+	width: 4vh;
+	height: 4vh;
 	border-radius: 50%;
 }
 
 .app-contact {
-	position: fixed;
 	top: 32px;
 	right: 48px;
 	display: flex;
@@ -23,22 +29,7 @@
 	margin-right: auto;
 	position: relative;
 }
-@media (max-width: 1920px) {
-	body {
-		font-size: 18px;
-	}
-}
 
-@media (min-width: 1440px) {
-	.content {
-		max-width: 1200px;
-	}
-}
-@media (max-width: 1920px) {
-	.content {
-		max-width: 1600px;
-	}
-}
 .main-player-wrapper {
 	height: 100vh;
 	display: flex;
@@ -56,12 +47,11 @@
 }
 
 .main-player-album-name {
-	font-size: 48px;
 	text-transform: uppercase;
 	font-weight: 600;
+	text-align: center;
 }
 .main-player-singer {
-	font-size: 32px;
 	font-weight: 600;
 	text-transform: uppercase;
 }
@@ -88,9 +78,7 @@
 	gap: 24px;
 	color: #d6d6d6;
 }
-.main-player-controls * {
-	font-size: 24px;
-}
+
 .marquee {
 	white-space: nowrap;
 	overflow: hidden;
@@ -99,7 +87,6 @@
 	display: inline-block;
 	padding-left: 100%;
 	animation: marquee 10s linear infinite;
-	color: white;
 	color: rgb(141, 141, 141);
 }
 @keyframes marquee {
@@ -130,7 +117,6 @@
 .stream-brands {
 	display: flex;
 	gap: 24px;
-	font-size: 24px;
 }
 .stream-brands > * {
 	width: 32px;
@@ -165,17 +151,20 @@
 }
 
 table {
-	font-size: 18px;
 	width: 100%;
 	border-collapse: collapse;
+	font-size: 18px;
 }
 
 table td:first-child,
 table td:last-child {
-	width: 32px;
+	width: 28px;
+}
+table td:nth-child(2) {
+	display: flex;
 }
 table td:nth-child(2) .icon-btn {
-	margin-right: 32px;
+	margin-right: max(12px, 2vw);
 }
 table td:nth-child(3) {
 	text-align: center;
@@ -201,7 +190,6 @@ table td {
 .footer-grid {
 	display: flex;
 	justify-content: space-between;
-	font-size: larger;
 }
 
 .footer-grid ul {
@@ -215,4 +203,147 @@ table td {
 	text-decoration: none;
 	font-weight: 600;
 	color: white;
+}
+.text-xl {
+	font-size: 56px;
+}
+.text-lg {
+	font-size: 48px;
+}
+.text-md {
+	font-size: 24px;
+}
+@media (min-width: 2560px) {
+	body {
+		font-size: 24px;
+	}
+	.content {
+		max-width: 2000px;
+	}
+	.main-player {
+		font-size: 48px;
+	}
+}
+@media (max-width: 1920px) {
+	body {
+		font-size: 18px;
+	}
+	.content {
+		max-width: 1600px;
+	}
+	.header-section {
+		font-size: 60px;
+	}
+}
+
+@media (max-width: 1440px) {
+	body {
+		font-size: 16px;
+	}
+	.content {
+		max-width: 1200px;
+	}
+	.banner {
+		width: 32vw;
+	}
+	.app-header {
+		padding: 8px 12px;
+		z-index: 1;
+		background-color: rgba(0,0,0,0.4);
+	}
+	.text-xl {
+		font-size: 40px;
+	}
+	.text-lg {
+		font-size: 32px;
+	}
+	.text-md {
+		font-size: 24px;
+	}
+}
+@media (max-width: 1024px) {
+	body {
+		font-size: 16px;
+	}
+	.content {
+		max-width: 1000px;
+	}
+	.text-xl {
+		font-size: 32px;
+	}
+	.text-lg {
+		font-size: 24px;
+	}
+	.text-md {
+		font-size: 16px;
+	}
+}
+
+@media (max-width: 768px) {
+	.content {
+		max-width: 700px;
+	}
+	.header-section {
+		font-size: 28px;
+	}
+	.main-player-wrapper {
+		flex-direction: column;
+		padding: 0;
+		height: fit-content;
+	}
+	.main-player {
+		align-items: center;
+	}
+	.banner {
+		width: 80vw;
+		flex-direction: column-reverse;
+		align-items: center;
+	}
+	.banner span {
+		writing-mode: unset;
+		transform: unset;
+	}
+	table td {
+		padding: 12px 4px;
+	}
+	.stream-brands {
+		gap: 12px
+	}
+	.stream-brands > * {
+		width: 24px;
+		height: 24px;
+		padding: 8px;
+	}
+	.footer {
+		margin: 0;
+		font-size: large;
+	}
+}
+
+@media (max-width: 532px) {
+	body {
+		font-size: 8px;
+	}
+	.content {
+		max-width: 532px;
+		padding: 0 14px;
+	}
+	.header-section {
+		font-size: 20px;
+	}
+	.stream-brands {
+		gap: 8px
+	}
+	.stream-brands > * {
+		width: 16px;
+		height: 16px;
+		padding: 8px;
+	}
+	table td {
+		font-size: 16px;
+		padding: 8px 2px;
+	}
+	.footer {
+		font-size: 16px;
+	}
 }

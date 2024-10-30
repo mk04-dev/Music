@@ -12,9 +12,9 @@ import { faFacebook, faGithub } from "@fortawesome/free-brands-svg-icons";
 function App() {
 	const { poster, links, musicVideo } = ALBUM;
 	return (
-		<div className="App" style={{ height: "200vh" }}>
-			<div>
-				<img className="app-logo" src={IMG} width={50} height={50} alt="App Logo" title="MK04"></img>
+		<div className="App">
+			<div className="app-header">
+				<img className="app-logo" src={IMG} alt="App Logo" title="MK04"></img>
 				<div className="app-contact">
 					<FontAwesomeIcon
 						className="icon-btn"
