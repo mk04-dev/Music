@@ -45,7 +45,7 @@ function App() {
 					<TrackList />
 				</Section>
 				<Section title="Music video">
-					<audio className="music-video" src={musicVideo} />
+					<iframe className="music-video" src={musicVideo} />
 				</Section>
 			</article>
 			<Footer />

@@ -153,7 +153,6 @@
 table {
 	width: 100%;
 	border-collapse: collapse;
-	font-size: 18px;
 }
 
 table td:first-child,
@@ -181,7 +180,7 @@ table td {
 }
 
 .footer {
-	margin: 8rem 0;
+	margin: 4rem 0;
 }
 
 .footer hr {
@@ -215,13 +214,22 @@ table td {
 }
 @media (min-width: 2560px) {
 	body {
-		font-size: 24px;
+		font-size: 32px;
 	}
 	.content {
 		max-width: 2000px;
 	}
 	.main-player {
 		font-size: 48px;
+	}
+	.text-xl {
+		font-size: 56px;
+	}
+	.text-lg {
+		font-size: 40px;
+	}
+	.text-md {
+		font-size: 32px;
 	}
 }
 @media (max-width: 1920px) {
@@ -269,10 +277,10 @@ table td {
 		max-width: 1000px;
 	}
 	.text-xl {
-		font-size: 32px;
+		font-size: 36px;
 	}
 	.text-lg {
-		font-size: 24px;
+		font-size: 28px;
 	}
 	.text-md {
 		font-size: 16px;
@@ -318,11 +326,17 @@ table td {
 		margin: 0;
 		font-size: large;
 	}
+	.app-contact {
+		flex-direction: row;
+	}
+	.app-contact svg {
+		height: 1.2em;
+	}
 }
 
 @media (max-width: 532px) {
 	body {
-		font-size: 8px;
+		font-size: 12px;
 	}
 	.content {
 		max-width: 532px;
@@ -340,10 +354,15 @@ table td {
 		padding: 8px;
 	}
 	table td {
-		font-size: 16px;
 		padding: 8px 2px;
 	}
 	.footer {
 		font-size: 16px;
+	}
+	.footer-grid {
+		display: block;
+	}
+	.footer-grid ul {
+		padding: 0
 	}
 }
