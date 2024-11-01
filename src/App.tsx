@@ -9,9 +9,10 @@ import Footer from "Footer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { useCallback, useEffect, useState } from "react";
+import Favicon from "react-favicon";
 
 function App() {
-	const { poster, links, musicVideo, tracks } = ALBUM;
+	const { name, banner, poster, links, musicVideo, tracks } = ALBUM;
 	const [playing, setPlaying] = useState<boolean>(false);
 	const [currentSong, setCurrentSong] = useState<Track>(tracks[0]);
 	const [idx, setIdx] = useState<number>(0);
@@ -20,6 +21,9 @@ function App() {
 	const [repeat, setRepeat] = useState<boolean>(false);
 	const [shuffle, setShuffle] = useState<boolean>(false);
 
+	useEffect(()=> {
+		document.title = name;
+	}, [name])
 	useEffect(() => {
 		setCurrentSong(trackList[idx]);
 		setCurrentTime(0);
@@ -54,6 +58,7 @@ function App() {
 
 	return (
 		<div className="App">
+			<Favicon url={banner}/>
 			<div className="app-header">
 				<img className="app-logo" src={IMG} alt="App Logo" title="MK04"></img>
 				<div className="app-contact">
