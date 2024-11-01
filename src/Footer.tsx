@@ -30,7 +30,7 @@ function Footer() {
 					</ul>
 					<div>
 						<h3>News</h3>
-						<span style={{color: '#d6d6d6'}}>Don't miss a thing, stay up to date with the latest news from us.</span>
+						<span className="text-secondary">Don't miss a thing, stay up to date with the latest news from us.</span>
 					</div>
 				</div>
 				<hr></hr>

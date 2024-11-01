@@ -2,11 +2,11 @@ import { faShareFromSquare } from "@fortawesome/free-regular-svg-icons";
 import { faPause, faPlay } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
-import { displayTime, Song } from "utils/utils";
+import { displayTime, Track } from "utils/utils";
 
 interface Props {
 	idx: number;
-	item: Song;
+	item: Track;
 }
 function TrackItem(props: Props) {
 	const { idx, item } = props;
